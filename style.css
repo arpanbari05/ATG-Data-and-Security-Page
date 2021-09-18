@@ -1,0 +1,298 @@
+:root {
+    --color-grey: #555;
+    --color-grey-light: #bbb;
+    --color-green: #22BB66;
+}
+
+/*Base*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .2s ease-in;
+}
+
+html {
+    font-size: 62.75%;
+}
+ 
+body {
+    font-family: Mulish;
+    font-weight: 500;
+}
+
+/*Typography*/
+.heading-primary {
+    font-size: 4rem;
+    font-weight: 600;
+}
+.heading-secondary {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.heading-tertiary {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 600;
+}
+
+.text-primary {
+    font-size: 18px;
+    color: var(--color-grey);
+    margin-top: 3rem;
+    line-height: 1.8;
+    font-weight: 600;
+}
+.text-secondary {
+    font-size: 16px;
+    color: var(--color-grey);
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+/*HR*/
+hr {
+    width: 7rem;
+    height: 4px;
+    background-color: var(--color-green);
+    border: none;
+    outline: none;
+    margin: 3rem 0;
+}
+
+/*Home*/
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30rem;
+    text-align: center;
+}
+.home-img {
+    width: 100%;
+    height: 50rem;
+    background-color: var(--color-grey-light);
+    border-radius: 2rem;
+    margin: 5rem 0;
+}
+.home-logos {
+    width: 50rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem 0;
+}
+.home-logo {
+    height: 100%;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8rem;
+    padding: 0 30rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+}
+.nav--link {
+    font-size: 16px;
+    color: var(--color-grey-light);
+    text-align: center;
+    text-decoration: none;
+    padding: 2rem 0;
+}
+
+.active,
+.home-footer--link:hover {
+    color: var(--color-grey);
+}
+
+
+/*Security*/
+.info {
+    padding: 15rem 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-odd {
+    background-color: #f4f5fa;
+}
+
+.info-primary {
+    margin-right: 15rem;
+    width: 45%;
+}
+.info-grid {
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+}
+
+.info-img {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-grey-light);
+    border-radius: 50%;
+}
+
+/*Note*/
+.note {
+    padding: 10rem 30rem;
+    text-align: center;
+}
+
+
+
+
+/******MEDIA QUERY*****/
+@media (max-width: 1400px) {
+    .info {
+        padding: 15rem 12rem;
+    }
+    .info-primary {
+        margin-right: 15rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .home{
+        padding: 0 15rem;
+    }
+    .nav {
+        padding: 0 15rem;
+    }
+    .info {
+        padding: 12rem 10rem;
+    }
+    .info-primary {
+        margin-right: 10rem;
+    }
+    
+    .heading-primary {
+        font-size: 3rem;
+    }
+    .heading-secondary {
+        font-size: 2rem;
+    }
+    .heading-tertiary {
+        font-size: 18px;
+    }
+    .text-primary {
+        font-size: 16px;
+    }
+    .text-secondary {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .home{
+        padding: 0 7rem;
+    }
+    .nav {
+        padding: 0 7rem;
+    }
+    .info {
+        padding: 8rem 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    hr {
+        margin: 2rem;
+    }
+    .home{
+        padding: 0 3rem;
+    }
+    .home-img {
+        width: 90%;
+        height: 50vw;
+    }
+    .nav {
+        padding: 0 1rem;
+    }
+    .info {
+        flex-direction: column;
+        padding: 8rem 3rem;
+    }
+    .info-primary, .info-grid {
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .note {
+        padding: 5rem 2rem;
+    }
+    .home-logos {
+        width: 40rem;
+        height: 7rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .heading-primary {
+        font-size: 22px;
+    }
+    .heading-secondary {
+        font-size: 20px;
+        margin: 0;
+    }
+    .heading-tertiary {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .text-primary {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    .text-secondary {
+        font-size: 13px;
+    }
+    .nav--link {
+        font-size: 13px;
+    }
+    .note {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    hr {
+        height: 2px;
+    }
+    .home {
+        padding: 0 10px;
+    }
+    .home-img {
+        width: 95%; 
+        margin: 2rem;   
+    }
+    .nav {
+        margin-top: 0;
+        overflow-x: scroll;
+    }
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav--link {
+        font-size: 11px;
+        margin: 0 10px;
+    }
+    .info{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-logos {
+        width: 90%;
+        height: 5rem;
+    }
+    
+}
